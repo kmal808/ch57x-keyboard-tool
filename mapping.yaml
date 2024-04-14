@@ -1,0 +1,31 @@
+#! CH57X KEYBOARD MAPPING TOOL
+#$ Source:
+#$ https://github.com/kriomant/ch57x-keyboard-tool
+
+#% Normal/deafult keyboard orienation is when buttons are on the left side and knobs are on the right.
+#% Alternative orientations are:
+#  (horizontal)
+#*   - "normal": buttons on the left, knobs on the right
+#*   - "upsidedown": buttons on the right, knobs on the left
+#   (vertical)
+#*   - "clockwise": buttons on the top, knobs on the bottom
+#*   - "counterclockwise": buttons on the bottom, knobs on the top
+
+#% Choose one of the aforementioned orientations:
+orientation: normal
+
+#% Count rows and columns with the keyboard in normal orientation (knobs on the right)
+rows: 1
+columns: 4
+knobs: 1
+
+layers:
+  - buttons:
+      #% Array of buttons
+      - ['cmd-c', 'cmd-v', 'cmd-p,enter']
+    knobs:
+      #% Knobs can be rotated counter-clockwise (ccw) or clockwise (cw)
+      #% and pressed down.
+      - ccw: 'wheelup'
+        press: 'enter'
+        cw: 'wheeldown'
